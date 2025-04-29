@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Form with CSV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        label, input, select {
+            margin: 10px 0;
+            display: block;
+        }
+        .dynamic-label {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Translation price calculator</h1>
+    <form id="dynamicForm">
+        <!-- Entry box -->
+        <label for="textInput">Enter the number of words to translate (You can get an approximation in Microsoft Words -> Properties)</label>
+        <input type="text" id="textInput" placeholder="Type something...">
+
+        <!-- First drop-down (populated from CSV) -->
+        <label for="dropdown1">Choose source language</label>
+        <select id="dropdown1">
+            <option value="">Loading...</option>
+        </select>
+
+        <!-- Second drop-down -->
+        <label for="dropdown2">Choose target language</label>
+        <select id="dropdown2">
+            <option value="">Loading...</option>
+        </select>
+
+        <!-- Dynamic label -->
+        <p class="dynamic-label" id="dynamicLabel">Estimated cost will appear here</p>
+    </form>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="pricecalculator.js"></script>
+</body>
+</html>
